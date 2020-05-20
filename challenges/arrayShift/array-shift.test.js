@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 function insertShiftArray(arr, value) {
   /// using splice
   //   len % 2 === 0
