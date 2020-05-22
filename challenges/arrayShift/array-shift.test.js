@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 function insertShiftArray(arr, value) {
   /// using splice
   //   len % 2 === 0
@@ -32,7 +33,7 @@ function removeMiddelIndex(arr) {
   return newArr;
 }
 
-///  Requirements unit test
+//  Requirements unit test
 describe('Array Shift', () => {
   it('its should add the giving value to middile of the array', () => {
     expect(insertShiftArray([2, 4, 6, 8], 5)).toEqual([2, 4, 5, 6, 8]);

@@ -20,5 +20,8 @@
   "homepage": "https://github.com/YazanAlaiwah-401-advanced-javascript/data-structures-and-algorithms#readme",
   "dependencies": {
     "jest": "^26.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
   }
 }

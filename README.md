@@ -1,6 +1,15 @@
-# data-structures-and-algorithms
+# 401 Code Challenges
 
-# Array Shift
+## code-challenge PR 
+
+[code-challenge-05](https://github.com/YazanAlaiwah-401-advanced-javascript/data-structures-and-algorithms/pull/3)
+
+
+
+
+
+
+<!-- # Array Shift
 
 i know some biult in function will make easyer but its not allow so i use just loop
 
@@ -30,4 +39,4 @@ the time complexity id O(1)
 
 ## Solution
 
-![class01](./assets/class01.png)
+![class01](./assets/class01.png) -->
