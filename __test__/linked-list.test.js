@@ -1,6 +1,6 @@
 /* eslint-disable no-redeclare */
 /* eslint-disable no-undef */
-let {Node,LinkedList} = require('../Data-Structures/linked-list/linked-list.js')
+let {Node,LinkedList} = require('../Data-Structures/linked-list/linked-list.js');
 
 describe('NODE MODULE',()=>{
   it('the node class should return an object with data and next = null',()=>{
