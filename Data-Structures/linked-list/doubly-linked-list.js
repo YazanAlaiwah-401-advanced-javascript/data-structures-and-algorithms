@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line no-redeclare
 class Node {
   constructor(data) {
     this.prev = null;
@@ -9,18 +11,22 @@ class Node {
 class DoublyLinkedList {
   constructor(){
     this.head = null;
+    this.tail = null;
   }
   insertLast(value){
     const node = new Node(value);
     if(!this.head){
       this.head = node;
+      this.tail = node;
       return this;
     }
     let currentNode = this.head;
     while (currentNode.next) {
       currentNode = currentNode.next;
     }
+    node.prev = currentNode;
     currentNode.next = node;
+    this.tail = node;
     return this;
   }
   insertFirst(value){
@@ -30,12 +36,26 @@ class DoublyLinkedList {
     this.head = node;
     return this;
   }
+  includes(value){
+    let current = this.head;
+    while(current){
+      if(current.data === value){
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+  toString(){
+    let linkedDataInStringFormated = 'NULL';
+    let current = this.head;
+    while(current){
+      linkedDataInStringFormated += ` <- {${current.data}} -> `;
+      current = current.next;
+    }
+    linkedDataInStringFormated += 'NULL';
+    return linkedDataInStringFormated;
+  }
 }
 
-let linked = new DoublyLinkedList();
-console.log(linked.insertLast(5))
-console.log(linked.insertFirst(7))
-console.log(linked.insertFirst(8))
-
-
-
+module.exports.DoublyLinkedList = new DoublyLinkedList();
