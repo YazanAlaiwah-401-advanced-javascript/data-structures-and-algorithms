@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-function BinarySearch(arr, key) {
+function binarySearch(arr, key) {
   let L = 0;
   let R = arr.length - 1;
   let M;
@@ -18,4 +18,4 @@ function BinarySearch(arr, key) {
   return -1;
 }
 
-module.exports = BinarySearch;
+module.exports = binarySearch;
