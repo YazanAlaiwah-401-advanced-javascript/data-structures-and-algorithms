@@ -4,6 +4,8 @@
 
 [code-challenge-01](https://github.com/YazanAlaiwah-401-advanced-javascript/data-structures-and-algorithms/pull/6)
 
+[code-challenge-03](https://github.com/YazanAlaiwah-401-advanced-javascript/data-structures-and-algorithms/pull/7)
+
 [code-challenge-05](https://github.com/YazanAlaiwah-401-advanced-javascript/data-structures-and-algorithms/pull/4)
 
 
