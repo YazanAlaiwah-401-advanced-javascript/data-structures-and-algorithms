@@ -12,10 +12,10 @@ describe('NODE MODULE',()=>{
 
 describe('LINKEDLIST MODULE',()=>{
   let linkedlist = new LinkedList();
-  linkedlist.insert(1);
-  linkedlist.insert(2);
-  linkedlist.insert(3);
-  it('Can properly insert into the linked list',()=>{
+  linkedlist.append(1);
+  linkedlist.append(2);
+  linkedlist.append(3);
+  it('Can properly append into the linked list',()=>{
     expect(linkedlist).toMatchObject({head:{data:1,next:{data:2,next:{data:3,next:null}}}});
   });
 
@@ -31,10 +31,10 @@ describe('LINKEDLIST MODULE',()=>{
 
   it('Can properly return a collection of all the values that exist in the linked list',()=>{
     expect(linkedlist.toString()).toEqual('{1} -> {2} -> {3} -> NULL');
-    linkedlist.insert('hello');
+    linkedlist.append('hello');
   });
 
-  it('Can properly insert multiple nodes into the linked list',()=>{
+  it('Can properly append multiple nodes into the linked list',()=>{
     expect(linkedlist.toString()).toEqual('{1} -> {2} -> {3} -> {hello} -> NULL');
   });
 
@@ -42,9 +42,9 @@ describe('LINKEDLIST MODULE',()=>{
     expect(linkedlist.head.data).toEqual(1);
   });
   it('Can successfully instantiate an empty linked list',()=>{
-    linkedlist.insert();
-    linkedlist.insert();
-    linkedlist.insert();
+    linkedlist.append();
+    linkedlist.append();
+    linkedlist.append();
     expect(linkedlist.toString()).toEqual('{1} -> {2} -> {3} -> {hello} -> {} -> {} -> {} -> NULL');
   });
 
