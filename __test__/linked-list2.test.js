@@ -52,12 +52,12 @@ describe('LINKEDLIST MODULE',()=>{
   it('Where k is not a positive integer',()=>{
     expect(linkedlist.kthFromEnd(-5)).toEqual('Exception');
   });
-  let newLink = new LinkedList()
-  newLink.append(1)
+  let newLink = new LinkedList();
+  newLink.append(1);
   it('Where the linked list is of a size 1',()=>{
     expect(newLink.kthFromEnd(0)).toEqual(1);
   });
- 
+
   it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list',()=>{
     expect(linkedlist.kthFromEnd(2)).toEqual(3);
   });

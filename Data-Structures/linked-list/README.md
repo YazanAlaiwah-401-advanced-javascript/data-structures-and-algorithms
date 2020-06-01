@@ -8,6 +8,7 @@ the challenge is to make linked list data structures have 3 mthod
 3. toString -> to show all the data as a chain in string type end with null
 4. insertAfter -> to add node after the value passed
 5. insertBefore -> to add node before the value passed
+6. kthFromEnd -> to have the value of the pass index in reverse way
 
 
 ## Approach & Efficiency
@@ -23,16 +24,13 @@ time -> Θ(1)
 3. toString -> to show all the data as a chain in string type end with null
 4. insertAfter -> to add node after the value passed
 5. insertBefore -> to add node before the value passed
-
+6. kthFromEnd -> to have the value of the pass index in reverse way
 
 ## Whiteboard
 
-*`append`*
-![linkedlist](../../assets/class06-append.png)
-*`insertAfter`*
-![linkedlist](../../assets/class06-after.png)
-*`insertBefore`*
-![linkedlist](../../assets/class06-before.png)
+*`kthFromEnd`*
+![linkedlist](../../assets/class07.png)
+
 
 
 

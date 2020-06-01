@@ -34,7 +34,7 @@ class LinkedList {
     if(current.data === value){
       node.next = current;
       this.head = node;
-      this.count++
+      this.count++;
       return this;
     }
     while(current.next !== null){
@@ -86,7 +86,7 @@ class LinkedList {
     let current = this.head;
     if(current.data === value){
       this.head = current.next;
-      this.count--
+      this.count--;
       return this;
     }
     while(current.next !== null){
@@ -104,9 +104,7 @@ class LinkedList {
     let current = this.head;
     let indexKey = this.count - k -1;
     let i = 0;
-    console.log(indexKey)
     while(i <= indexKey && k >= 0 ){
-      console.log(i)
       if(i === indexKey) return current.data;
       current = current.next;
       i++;
@@ -115,7 +113,7 @@ class LinkedList {
   }
 
   findmiddel(){
-    let index = Math.floor(this.count / 2)
+    let index = Math.floor(this.count / 2);
     let current = this.head;
     while(index <= this.count){
       if(index === this.count) return current.data;
@@ -125,20 +123,6 @@ class LinkedList {
   }
 
 }
-// console.log( )
+
 module.exports.Node = Node;
 module.exports.LinkedList = LinkedList;
-// let l = new LinkedList()
-// console.log(l.append(1))
-// console.log(l.append(2))
-// console.log(l.append(3))
-// console.log(l.append(4))
-// console.log(l.append(5))
-// console.log(l.append(6))
-// console.log(l.append(7))
-// console.log(l.append(8))
-// console.log(l.delete(8))
-// console.log(l.toString())
-// console.log(l.count)
-// console.log(l.kthFromEnd(6))
-// console.log(l.findmiddel())
