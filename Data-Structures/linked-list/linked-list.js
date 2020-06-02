@@ -142,24 +142,72 @@ class LinkedList {
     }
     return this;
   }
+
+  mergeListsAndSorted(ll1,ll2){
+    let current ;
+    if(ll1.head.data < ll2.head.data){
+      this.head = Object.assign({}, ll1.head);
+      current = this.head;
+      current.next = Object.assign({}, ll2.head);
+    }else{
+      this.head = Object.assign({}, ll2.head);
+      current = this.head;
+      current.next = Object.assign({}, ll1.head);
+    }
+    ll1 = ll1.head.next;
+    ll2 = ll2.head.next;
+    current = current.next;
+    while(ll1||ll2){
+      if(ll1 === null){
+        current.next = Object.assign({}, ll2);
+        current = current.next;
+        ll2 = ll2.next;
+        continue;
+      }else if(ll2){
+        current.next = Object.assign({}, ll1);
+        current = current.next;
+        ll1 = ll1.next;
+        continue;
+      }
+      // if(ll1.data < ll2.data && ll1){
+      //   console.log(this.toString());
+      //   current.next = Object.assign({}, ll1);
+      //   current = current.next;
+      //   ll1 = ll1.next ? ll1.next : {};
+      // }
+      // // else{
+      // //   current.next = Object.assign({}, ll2);
+      // //   current = current.next;
+      // //   ll1 = ll2.next;
+      // // }
+      // console.log(ll1)
+
+      // if(ll1.data > ll2.data &&ll2){
+      //   current.next = Object.assign({}, ll2);
+      //   current = current.next;
+      //   ll2 = ll2.next;
+      // }
+    }
+    return this;
+  }
 }
 
 module.exports.Node = Node;
 module.exports.LinkedList = LinkedList;
 let l1 = new LinkedList();
 l1.append(1);
-l1.append(3);
+l1.append(2);
 l1.append(5);
-l1.append(5);
-l1.append(5);
+
 let l2 = new LinkedList();
-l2.append(2);
+l2.append(3);
 l2.append(4);
 l2.append(6);
-l2.append(6);
-l2.append(6);
+// l2.append(6);
+// l2.append(6);
 
 let test = new LinkedList();
 console.log(l1.head,l2);
-console.log(test.mergeLists(l1,l2));
+console.log(test.mergeListsAndSorted(l1,l2));
 console.log(test.toString());
+console.log(null<0);
