@@ -61,5 +61,27 @@ describe('LINKEDLIST MODULE',()=>{
   it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list',()=>{
     expect(linkedlist.kthFromEnd(2)).toEqual(3);
   });
+  let l1 = new LinkedList();
+  l1.append(1);
+  l1.append(3);
+  l1.append(5);
+  l1.append(5);
+  let l2 = new LinkedList();
+  l2.append(2);
+  l2.append(4);
+  l2.append(6);
+  l2.append(7);
+  l2.append(8);
 
+  it('“its should merge to linkedlist in mergelist mthod',()=>{
+    let test = new LinkedList();
+    test.mergeLists(l1,l2);
+    expect(test.toString()).toEqual('{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> {5} -> {7} -> {8} -> NULL');
+  });
+
+  it('“its should merge and sort to linkedlist sorted',()=>{
+    let test = new LinkedList();
+    test.mergeListsAndSorted(l1,l2);
+    expect(test.toString()).toEqual('{1} -> {2} -> {3} -> {4} -> {5} -> {5} -> {6} -> {7} -> {8} -> NULL');
+  });
 });
