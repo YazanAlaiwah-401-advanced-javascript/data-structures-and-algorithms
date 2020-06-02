@@ -28,8 +28,8 @@ time -> Θ(1)
 
 ## Whiteboard
 
-*`kthFromEnd`*
-![linkedlist](../../assets/class07.png)
+*`mergeLists`*
+![linkedlist](../../assets/class08-mergeList.png)
 
 
 

@@ -121,8 +121,45 @@ class LinkedList {
       index++;
     }
   }
-
+  mergeLists(ll1,ll2){
+    this.head = Object.assign({}, ll1.head);
+    let current = this.head;
+    current.next = Object.assign({}, ll2.head);
+    ll1 = ll1.head.next;
+    ll2 = ll2.head.next;
+    current = current.next;
+    while(ll1||ll2){
+      if(ll1){
+        current.next = Object.assign({}, ll1);
+        current = current.next;
+        ll1 = ll1.next;
+      }
+      if(ll2){
+        current.next = Object.assign({}, ll2);
+        current = current.next;
+        ll2 = ll2.next;
+      }
+    }
+    return this;
+  }
 }
 
 module.exports.Node = Node;
 module.exports.LinkedList = LinkedList;
+let l1 = new LinkedList();
+l1.append(1);
+l1.append(3);
+l1.append(5);
+l1.append(5);
+l1.append(5);
+let l2 = new LinkedList();
+l2.append(2);
+l2.append(4);
+l2.append(6);
+l2.append(6);
+l2.append(6);
+
+let test = new LinkedList();
+console.log(l1.head,l2);
+console.log(test.mergeLists(l1,l2));
+console.log(test.toString());
