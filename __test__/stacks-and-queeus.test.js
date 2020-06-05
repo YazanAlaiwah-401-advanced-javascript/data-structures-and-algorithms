@@ -5,24 +5,24 @@ let {Stack,Queue} = require('../Data-Structures/stacks_and_queues/stacks-and-que
 
 describe('Stack Moduel',()=>{
   let stack = new Stack();
- 
+
   it('Can successfully push onto a stack',()=>{
     stack.push(5);
     expect(stack.peek()).toEqual(5);
   });
- 
+
   it('Can successfully push multiple values onto a stack',()=>{
     stack.push(4);
     stack.push(3);
     expect(stack.top).toMatchObject({data:3,next:{data:4,next:{data:5,next:null}}});
   });
- 
+
   it('Can successfully pop off the stack',()=>{
     expect(stack.peek()).toEqual(3);
     stack.pop();
     expect(stack.peek()).toEqual(4);
   });
- 
+
   it('Can successfully peek the next item on the stack',()=>{
     expect(stack.peek()).toEqual(4);
   });
@@ -32,12 +32,12 @@ describe('Stack Moduel',()=>{
     stack.pop();
     expect(stack.top).toEqual(null);
   });
- 
+
   it('Can successfully instantiate an empty stack',()=>{
     let empty = new Stack();
     expect(empty.top).toEqual(null);
   });
- 
+
   it('Calling pop or peek on empty stack raises exception',()=>{
     expect(stack.pop()).toEqual('exception');
     expect(stack.peek()).toEqual('exception');
@@ -72,7 +72,7 @@ describe('QUEUE MODUEL',()=>{
     expect(queue.front).toEqual(null);
     expect(queue.rare).toEqual(null);
   });
- 
+
   it('Can successfully instantiate an empty queue',()=>{
     let empty = new Queue();
     expect(empty.rare).toEqual(null);

@@ -19,12 +19,8 @@ class Stack {
   }
   push(item) {
     let newNode = new Node(item);
-    if(this.top){
-      newNode.next = this.top;
-      this.top = newNode;
-    }else{
-      this.top = newNode;
-    }
+    newNode.next = this.top;
+    this.top = newNode;
   }
   pop() {
     if(!!this.isEmpty()) return 'exception';
