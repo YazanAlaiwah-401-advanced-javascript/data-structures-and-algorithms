@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-redeclare */
 'use strict';
 
@@ -28,7 +29,7 @@ class Queue {
     }
   }
   dequeue(type){
-    if (this.front == null) return 'empty';
+    if (this.front === null) return 'empty';
     if (!type) {
       let value = this.front.value;
       this.front = this.front.next;
