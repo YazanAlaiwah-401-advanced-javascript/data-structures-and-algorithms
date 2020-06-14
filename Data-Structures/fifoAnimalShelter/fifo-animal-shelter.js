@@ -1,56 +1,59 @@
-// /* eslint-disable no-redeclare */
-// 'use strict';
+/* eslint-disable no-redeclare */
+'use strict';
 
-// class Node {
-//   constructor(data) {
-//     this.data = data;
-//     this.next = null;
-//   }
-// }
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
 
 
-// class Queue {
-//   constructor(){
-//     this.front = null;
-//     this.rare = null;
-//   }
-//   enqueue (item) {
-//     let node = new Node(item);
-//     if(node.data.type!=='cat'&&node.data.type!=='dog'){
-//       return 'its only dogs and cats';
-//     }
-//     if(this.rare){
-//       this.rare.next = node;
-//       this.rare = node;
-//     }else{
-//       this.front = node;
-//       this.rare = this.front;
-//     }
-//   }
-//   dequeue(type){
-//     let currentNode = this.front;
-//     if(this.front === this.rare){
-//       this.front = null;
-//       this.rare = null;
-//       return 'exception';
-//     }
-//     if(type!=='cat'&&type!=='dog'){
-//       return null;
-//     }
-//     while(currentNode){
-//       if(currentNode.type === type){
-//  }
-//     }
-//     // if()
-//     let temp = this.front.data;
-//     this.front = this.front.next;
-//     return temp;
-//   }
-//   peek(){
-//     if(!this.isEmpty()) return this.front.data;
-//     return 'exception';
-//   }
-//   isEmpty(){
-//     return !this.front;
-//   }
-// }
+class Queue {
+  constructor(){
+    this.front = null;
+    this.rare = null;
+  }
+  enqueue (item) {
+    let node = new Node(item);
+    if(node.data.type!=='cat'&&node.data.type!=='dog'){
+      return 'its only dogs and cats';
+    }
+    if(this.rare){
+      this.rare.next = node;
+      this.rare = node;
+    }else{
+      this.front = node;
+      this.rare = this.front;
+    }
+  }
+  dequeue(type){
+    if (this.front == null) return 'empty';
+    if (!type) {
+      let value = this.front.value;
+      this.front = this.front.next;
+      return value;
+    }
+    if (type === 'dog' || type === 'cat') {
+      if (this.front.value === type) {
+        let value = this.front.value;
+        this.front = this.front.next;
+        return value;
+      }
+      let current = this.front;
+      while (current.next) {
+        if (current.next.value === type) {
+          let value = current.next.value;
+          current.next = current.next.next;
+          current.next ? null : this.rear = current;
+          return value;
+        }
+        current = current.next;
+      }
+      return 'not found';
+    }
+    else {
+      return null;
+    }
+  }
+}
