@@ -54,20 +54,20 @@ class BinaryTree {
       this.root = node;
       return this;
     }
-    while(currentNode){
-      if(currentNode.value<node.value){
-        if(currentNode.right===null){
+    while (currentNode) {
+      if (currentNode.value < node.value) {
+        if (currentNode.right === null) {
           currentNode.right = node;
           return this;
-        }else{
+        } else {
           currentNode = currentNode.right;
           continue;
         }
-      }else{
-        if(currentNode.left===null){
+      } else {
+        if (currentNode.left === null) {
           currentNode.left = node;
           return this;
-        }else{
+        } else {
           currentNode = currentNode.left;
           continue;
         }
@@ -75,23 +75,37 @@ class BinaryTree {
     }
   }
 
-  contains(value){
+  contains(value) {
     let currentNode = this.root;
-    if(currentNode === null){
+    if (currentNode === null) {
       return false;
     }
-    while(currentNode){
-      if(currentNode.value === value){
+    while (currentNode) {
+      if (currentNode.value === value) {
         return true;
-      }else if(currentNode.value < value){
+      } else if (currentNode.value < value) {
         currentNode = currentNode.right;
-      }else if(currentNode.value > value){
+      } else if (currentNode.value > value) {
         currentNode = currentNode.left;
       }
     }
     return false;
   }
-}
 
+  breadthFirstTraversal(tree) {
+    let resulte = [];
+    let childs = [];
+    let node = tree.root;
+    if (!node) return 'the tree is empty';
+    childs.push(node);
+    while (childs.length) {
+      let tempNode = childs.shift();
+      resulte.push(tempNode.value);
+      if (tempNode.left) childs.push(tempNode.left);
+      if (tempNode.right) childs.push(tempNode.right);
+    }
+    return resulte;
+  }
+}
 
 module.exports = BinaryTree;
