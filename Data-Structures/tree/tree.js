@@ -96,7 +96,7 @@ class BinaryTree {
     let resulte = [];
     let childs = [];
     let node = tree.root;
-    if (!node) return 'nothing in the tree';
+    if (!node) return 'the tree is empty';
     childs.push(node);
     while (childs.length) {
       let tempNode = childs.shift();
