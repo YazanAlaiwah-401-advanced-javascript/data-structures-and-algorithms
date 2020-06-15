@@ -109,16 +109,3 @@ class BinaryTree {
 }
 
 module.exports = BinaryTree;
-
-// let t = new BinaryTree()
-// t.add(10)
-// t.add(8)
-// t.add(11)
-// t.add(7)
-// t.add(9)
-// t.add(6)
-// t.add(12)
-// t.add(13)
-
-// let s = new BinaryTree()
-// console.log(s.breadthFirstTraversal(t))
