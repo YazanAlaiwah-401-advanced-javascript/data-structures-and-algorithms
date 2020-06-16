@@ -29,4 +29,10 @@ describe('Stack Moduel', () => {
   it('it should return the tree is empty if there is no nodes', () => {
     expect(tree1.breadthFirstTraversal(tree2)).toEqual('the tree is empty');
   });
+  it('it shuold finde the max number of the tree', () => {
+    expect(tree1.findMaximumValue()).toEqual(13);
+  });
+  it('it should return null if there is nothing in the tree', () => {
+    expect(tree2.findMaximumValue()).toEqual(null);
+  });
 });

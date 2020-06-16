@@ -106,6 +106,18 @@ class BinaryTree {
     }
     return resulte;
   }
+  findMaximumValue() {
+    let results = null;
+    const _traversal = (node) => {
+      if (node.left) _traversal(node.left);
+      if (node.right) _traversal(node.right);
+      results = results < node.value ? node.value : results;
+    };
+    if (this.root) {
+      _traversal(this.root);
+    }
+    return results;
+  }
 }
 
 module.exports = BinaryTree;
