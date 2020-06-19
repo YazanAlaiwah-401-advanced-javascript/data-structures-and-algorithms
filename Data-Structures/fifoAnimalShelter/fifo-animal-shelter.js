@@ -9,51 +9,49 @@ class Node {
   }
 }
 
-
 class Queue {
-  constructor(){
+  constructor() {
     this.front = null;
     this.rare = null;
   }
-  enqueue (item) {
+  enqueue(item) {
     let node = new Node(item);
-    if(node.data.type!=='cat'&&node.data.type!=='dog'){
+    if (node.data.type !== 'cat' && node.data.type !== 'dog') {
       return 'its only dogs and cats';
     }
-    if(this.rare){
+    if (this.rare) {
       this.rare.next = node;
       this.rare = node;
-    }else{
+    } else {
       this.front = node;
       this.rare = this.front;
     }
   }
-  dequeue(type){
+  dequeue(type) {
     if (this.front === null) return 'empty';
     if (!type) {
-      let value = this.front.value;
+      let value = this.front.data;
       this.front = this.front.next;
       return value;
     }
     if (type === 'dog' || type === 'cat') {
-      if (this.front.value === type) {
-        let value = this.front.value;
+      if (this.front.type === type) {
+        let data = this.front.data;
         this.front = this.front.next;
-        return value;
+        return data;
       }
       let current = this.front;
       while (current.next) {
-        if (current.next.value === type) {
-          let value = current.next.value;
+        if (current.next.data.type === type) {
+          let data = current.next.data;
           current.next = current.next.next;
-          current.next ? null : this.rear = current;
-          return value;
+          current.next ? null : (this.rear = current);
+          return data;
         }
         current = current.next;
       }
       return 'not found';
-    }
-    else {
+    } else {
       return null;
     }
   }
