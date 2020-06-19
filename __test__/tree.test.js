@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 'use strict';
-let Tree = require('../Data-Structures/tree/tree.js');
+let Tree = require('../challenges/BinarySearchTree/tree.js');
 
 describe('Stack Moduel', () => {
   let tree2 = new Tree();
