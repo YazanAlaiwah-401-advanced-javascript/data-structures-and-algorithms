@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 function InsertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
@@ -12,7 +13,4 @@ function InsertionSort(arr) {
   return arr;
 }
 
-console.log(InsertionSort([20, 18, 12, 8, 5, -2]));
-console.log(InsertionSort([5, 12, 7, 5, 5, 7]));
-console.log(InsertionSort([2, 3, 5, 7, 13, 11]));
 module.exports = InsertionSort;
