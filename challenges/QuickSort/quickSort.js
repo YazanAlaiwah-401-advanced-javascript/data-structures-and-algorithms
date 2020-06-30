@@ -37,10 +37,5 @@ function swap(arr, i, low) {
   arr[i] = arr[low];
   arr[low] = temp;
 }
-let arr = [20, 18, 12, 8, 5, -2];
-// let arr2 = [5, 12, 7, 5, 5, 7];
-// let arr3 = [2, 3, 5, 7, 13, 11];
-console.log(quickSort(arr, 0, arr.length - 1));
-// console.log(quickSort(arr2, 0, arr2.length - 1));
-// console.log(quickSort(arr3, 0, arr3.length - 1));
+
 module.exports = quickSort;
