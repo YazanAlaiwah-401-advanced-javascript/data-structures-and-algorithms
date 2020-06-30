@@ -13,6 +13,6 @@ the challenge is to make Quick Sort
 space -> O(n)
 time -> Θ(n)
 
-### UML
+<!-- ### UML -->
 
-![tree](../../assets/tree.png)
+<!-- ![tree](../../assets/tree.png) -->
