@@ -19,7 +19,6 @@ function partition(arr, left, right) {
   // create a variable to track the largest index of numbers lower than the defined pivot
   let low = left - 1;
   for (let i = left; i < right; i++) {
-    console.log(left, low, arr[i]);
     if (arr[i] <= pivot) {
       low++;
       swap(arr, i, low);
