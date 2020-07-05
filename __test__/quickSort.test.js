@@ -1,5 +1,3 @@
-'use strict';
-
 /* eslint-disable no-undef */
 'use strict';
 const quickSort = require('../challenges/QuickSort/quickSort.js');
