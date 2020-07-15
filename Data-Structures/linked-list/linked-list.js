@@ -166,6 +166,45 @@ class LinkedList {
     return this;
   }
 }
+function tst(ll) {
+  if (ll === null) {
+    return;
+  }
+  let next = ll.head.next || ll.next;
+  let per = ll.head || ll;
+  console.log(next);
+  tst(next);
+  if (next === 9) {
+    next.data = 0;
+    per.data = per.data + 1;
+  } else {
+    next.data + 1;
+  }
+
+  // while (current.next) {
+  //   per = current
+  //   current = current.next;
+  // }
+  // if(current.data === 9){
+  //   current.data = 0
+  //   per.data = per.data + 1
+  // }else{
+  //   current.data = current.data +1
+
+  // }
+  console.log(current, per);
+  return ll;
+}
+
+let ll = new LinkedList();
+ll.append(5);
+ll.append(9);
+ll.append(9);
+ll.append(9);
+// ll.append(2)
+// ll.append(3)
+// ll.append(7)
+console.log(tst(ll));
 
 module.exports.Node = Node;
 module.exports.LinkedList = LinkedList;
